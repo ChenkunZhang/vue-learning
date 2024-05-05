@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搭建开发环境</title>
+    <!-- 引入Vue.js ，直接用 <script> 引入：CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+</head>
+<body>
+    <!-- 挂载点 --> 
+    <div id="root">
+        <h1>
+            <h1>Hello,{{ message }}!</h1>
+        </h1>
+    </div>
+
+    <script type="text/javascript" >
+        // 关闭生产模式下给出的提示
+        Vue.config.productionTip = false
+
+        // 创建 Vue 实例
+        /**
+            * 注意:一个vue实例不可能去接管多个容器，如果有多个容器的情况，vue事例永远只接管第一个容器
+            * 不能多个vue实例同时来接管同一个容器，如果有多个的情况下永远是第一个vue实例来接管该容器
+            * vue实例与容器直接的对应关系是一对一的
+            */
+        var app = new Vue({
+            // 挂载点
+            el: '#root',
+            // 数据
+            data: {
+                //data用来存储数据，以后会用函数来表示
+                message: 'Vue'
+            }
+        })
+
+    </script>
+
+</body>
+</html>
