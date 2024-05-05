@@ -15,7 +15,7 @@
         Vue.config.productionTip = false 
         // 创建Vue实例
         var app = new Vue({
-            //1.el的第一种写法：
+            //1.el的第一种写法
             //el: '#root',
 
             //+data的第一种写法: 对象式
@@ -23,7 +23,7 @@
                 message: 'Vue',
             }*/
 
-            //+data的第二种写法:函数式
+            //+data的第二种写法:函数式：***推荐使用
             data(){
                 //若用箭头函数：data: () => {}，console.log(`@@@@`, this); //箭头函数没有自己的this，它的this是继承自上一级
                 console.log('@@@', this); //此时this是Vue实例
@@ -32,7 +32,7 @@
                 }
             }
         })
-        //2.el的第二种写法: 
+        //2.el的第二种写法:更灵活 
         setTimeout(() => app.$mount('#root'),1)
 
     </script>
